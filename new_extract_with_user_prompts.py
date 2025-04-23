@@ -16,11 +16,13 @@ with open(File_path , 'r') as file:
   dt = int(Time_step)
   auto_derivative = gradient(stored_gk_integral_data, dt)
 Graph_Title = input("Enter Graph Title... EG ACF for 0.70 S/m run: ")
-
+Time_units = input("Enter the units of time eg fs,s,ns....")
 plt.plot(stored_time_data,auto_derivative, label = Graph_Title )
-plt.xlabel('Time (fs)')
+plt.xlabel('Time ('+Time_units+')')
 plt.ylabel('Intensity')
 plt.legend()
 plt.show()
 
 #print(data)
+
+
